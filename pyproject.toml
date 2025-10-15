@@ -1,0 +1,33 @@
+[build-system]
+# Specifies the build system requirements for the project
+requires = ["setuptools", "wheel"]  # These are the typical requirements for packaging a project
+build-backend = "setuptools.build_meta"  # Specifies that setuptools will be used as the build backend
+
+[tool.setuptools]
+# The metadata for the package
+name = "my_package"  # The name of your package
+version = "0.1.0"  # The initial version of your package
+description = "A simple Python package"  # Short description of your package
+long_description = "This is a long description of your package."  # (Optional) A longer description
+long_description_content_type = "text/markdown"  # Type of content for long description (usually markdown)
+authors = [{ name = "Your Name", email = "you@example.com" }]  # Author information
+
+# Dependencies your package needs to run
+[tool.setuptools.dependencies]
+install_requires = ["requests>=2.25.0"]  # List of required external packages
+
+# Optional: dev dependencies
+[tool.setuptools.dev-dependencies]
+# e.g., dependencies needed for development, testing, linting, etc.
+dev = ["pytest>=6.0", "black", "flake8"]
+
+[tool.setuptools.entry_points]
+# If your package provides command-line tools (console scripts), you can specify them here
+# This example shows how to create a simple command-line tool
+console_scripts = [
+    "my-cli=my_package.cli:main",  # Format: "command_name=module:function"
+]
+
+[tool.setuptools.packages]
+# Defines how the package structure is determined
+find = { where = ["src"] }  # This is useful if you store your code under a 'src' directory

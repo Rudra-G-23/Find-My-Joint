@@ -1,0 +1,9 @@
+# Active the Virtual environment 
+
+.venv\Scripts\activate
+
+# deactivate
+
+
+
+

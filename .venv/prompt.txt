@@ -1,0 +1,43 @@
+I want to create an python library that can help me to find the joint between across many datasets so I think to create an python package which contains few things 
+
+- only one line functions which helps me the find the joint and make a data frame so we can manuplate 
+- one network graph that give me the interactive network graph  when we provide this dataset it give me the all the a beatiful graph of the relationship 
+
+you provide me structure the my python packge with this two main functionalitys  and 
+give me the all requemient need for this and think long give me a proper plan for this 
+
+
+```pythn
+# dataset sources 
+ds1 = 
+ds2 = 
+.....
+
+FindMyJoint(
+datasets = [ds1, ds2, ds3],
+columns = ["column_1", ""column_2", ""column_3"],
+include =
+exclude 
+include_dtype =
+exclude_dtype = 
+)
+
+```
+
+
+
+def FindMyJoint(datasets, columns, include=None, exclude=None, include_dtype=None, exclude_dtype=None):
+    """
+    Function to find potential joins from multiple datasets based on specified columns, inclusion, and exclusion rules.
+    
+    Args:
+    - datasets (list of pd.DataFrame): List of datasets (DataFrames) to join.
+    - columns (list of str): Columns to join on (must be in all datasets).
+    - include (list of str, optional): Columns to include in the join.
+    - exclude (list of str, optional): Columns to exclude from the join.
+    - include_dtype (list of str, optional): Data types to include for joinable columns (e.g., 'int64', 'float64').
+    - exclude_dtype (list of str, optional): Data types to exclude from joinable columns.
+
+    Returns:
+    - pd.DataFrame: A DataFrame resulting from the join of all datasets.
+    """
