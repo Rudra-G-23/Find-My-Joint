@@ -1,7 +1,11 @@
 # Find My Joint 
+![img](assets/find-my-joint-logo.png)
 
 > [!NOTE]
 > A Python utility to analyze and compare columns across multiple pandas DataFrames, suggesting potential join keys and visualizing the relationships.
+
+> **Package Documentation**: https://rudra-g-23.github.io/Find-My-Joint/
+
 
 When working with multiple disparate datasets, finding common columns to join them on is a tedious manual task. findmyjoint automates this by:
 
@@ -44,6 +48,10 @@ You can get a comparison matrix or an interactive graph with a single line of co
 ```bash
 # Install 
 pip install findmyjoint pandas -q
+
+# Import
+import pandas as pd
+import findmyjoint as fmj
 
 # Create data frames
 df1 = pd.DataFrame({

@@ -135,3 +135,8 @@ extra:
     - icon: fontawesome/brands/pinterest
       link: https://in.pinterest.com/rudraprasadbhuyan23
       name: Pinterest
+
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
