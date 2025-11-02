@@ -1,4 +1,4 @@
-# FindMyJoint
+# Find My Joint 
 
 > [!NOTE]
 > A Python utility to analyze and compare columns across multiple pandas DataFrames, suggesting potential join keys and visualizing the relationships.
@@ -14,9 +14,25 @@ When working with multiple disparate datasets, finding common columns to join th
 ## Installation
 You will be able to install this via pip once it's published:
 
-
+Install from PyPI:
 ```bash
 pip install findmyjoint
+```
+
+Install from source(development)
+```bash
+git clone https://github.com/Rudra-G-23/Find-My-Joint.git
+
+cd Find-My-Joint
+
+python -m venv .venv
+# Linux / macOS
+source .venv/bin/activate
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+pip install -e ".[all]"
 ```
 
 
@@ -78,4 +94,4 @@ print("Graph 'joint_graph.html' created.")
 ```
 
 ### 3. Joint Visualization
-![img](pic/v0.0.1-network.png)
+![img](assets/find-my-joint-v0.0.1-demo-video.gif)

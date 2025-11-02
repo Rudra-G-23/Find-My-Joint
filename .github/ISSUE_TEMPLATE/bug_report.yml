@@ -1,0 +1,59 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in FindMyJoint
+title: "[BUG] <short description>"
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the details below.
+
+  - type: input
+    id: version
+    attributes:
+      label: FindMyJoint Version
+      description: What version are you using? (e.g., 0.0.1)
+      placeholder: "0.0.x"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: What happened? What did you expect to happen?
+      placeholder: "When I ran fmj.compare(...), I got an error..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please include code snippets, sample DataFrames, or steps to replicate.
+      placeholder: |
+        1. Create DataFrame A and B
+        2. Call fmj.compare([A, B])
+        3. Observe error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Message or Logs
+      description: Paste any relevant error output or traceback here.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues
+          required: true
+        - label: I have provided reproducible steps
+          required: true
+        - label: I am using the latest version

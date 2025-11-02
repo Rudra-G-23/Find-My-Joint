@@ -1,0 +1,60 @@
+name: 📝 Documentation / Example Request
+description: Request improvements or additional examples in the FindMyJoint docs
+title: "[DOCS] <short description>"
+labels: ["documentation"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve FindMyJoint's documentation!  
+        Please describe what’s unclear or missing.
+
+  - type: dropdown
+    id: doc_area
+    attributes:
+      label: Area of Documentation
+      description: Which part of the documentation needs improvement?
+      options:
+        - Installation
+        - Quickstart / Usage
+        - API Reference
+        - Example Notebooks
+        - Visualization (network graph)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Description
+      description: What do you find unclear or missing?
+      placeholder: "The example for fmj.network doesn’t explain the threshold parameter well..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement_suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How could this documentation be improved?
+      placeholder: "Add a short code snippet demonstrating threshold usage and resulting graph differences."
+
+  - type: input
+    id: related_page
+    attributes:
+      label: Related Page / File
+      description: Link to the relevant section or file if possible.
+      placeholder: "README.md, line 45"  
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that this documentation gap doesn’t already exist in open issues
+          required: true
+        - label: I have provided enough context for maintainers to understand the request
+          required: true

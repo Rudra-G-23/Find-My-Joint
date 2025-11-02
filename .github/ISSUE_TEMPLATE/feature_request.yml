@@ -1,0 +1,45 @@
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement for FindMyJoint
+title: "[FEATURE] <short description>"
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your idea! Please describe your feature below.
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why do you need this feature? What problem does it solve?
+      placeholder: "Finding join keys across 10+ datasets is slow..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like FindMyJoint to behave?
+      placeholder: "Add a 'summary=True' flag to compare() to only show top join candidates."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you tried any workarounds or other tools?
+      placeholder: "Tried pandas-profiling, but it doesn't suggest joins."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked existing issues
+          required: true
+        - label: This feature would be useful for multiple users
