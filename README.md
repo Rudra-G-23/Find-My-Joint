@@ -1,6 +1,7 @@
 # FindMyJoint
 
-A Python utility to analyze and compare columns across multiple pandas DataFrames, suggesting potential join keys and visualizing the relationships.
+> [!NOTE]
+> A Python utility to analyze and compare columns across multiple pandas DataFrames, suggesting potential join keys and visualizing the relationships.
 
 When working with multiple disparate datasets, finding common columns to join them on is a tedious manual task. findmyjoint automates this by:
 
@@ -77,4 +78,4 @@ print("Graph 'joint_graph.html' created.")
 ```
 
 ### 3. Joint Visualization
-![img](pic\v0.0.1-network.png)
+![img](pic/v0.0.1-network.png)
