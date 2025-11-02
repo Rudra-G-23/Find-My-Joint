@@ -140,3 +140,4 @@ extra:
 nav:
   - Home: index.md
   - Quickstart: quickstart.md
+  - Play Ground: play-ground.md
