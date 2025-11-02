@@ -33,3 +33,12 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/Rudra-G-23/Find-My-Joint"
 Issues = "https://github.com/Rudra-G-23/Find-My-Joint/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.metadata]
+license-files = ["LICENSE"]
