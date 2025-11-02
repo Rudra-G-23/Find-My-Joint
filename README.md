@@ -25,6 +25,10 @@ You can get a comparison matrix or an interactive graph with a single line of co
 
 ### 1. Create toy datasets
 ```bash
+# Install 
+pip install findmyjoint pandas -q
+
+# Create data frames
 df1 = pd.DataFrame({
     'age': [21, 25, 30, 45],
     'name': ['Alice', 'Bob', 'Charlie', 'David'],
@@ -43,6 +47,7 @@ df3 = pd.DataFrame({
     'years_old': [21, 25, 30, 45]
 })
 
+# Your joint requirement
 datasets = [df1, df2, df3]
 names = ['hr', 'crm', 'finance']
 
@@ -52,9 +57,24 @@ matrix = fmj.compare(datasets, names=names, name_threshold=0.6)
 print(matrix.head())
 
 # 3. Generate the interactive network graph
-print("\n--- Generating Network Graph ---")
-
 # This will create and automatically open 'joint_graph.html'
+print("\n--- Generating Network Graph ---")
 fmj.network(datasets, names=names, threshold=0.6)
 print("Graph 'joint_graph.html' created.")
 ```
+
+### 2. Potential join Data Frame with suggestions
+```bash
+| dataset_left | column_left | dataset_right | column_right      | name_sim | dtype_match | content_sim | suggestion                         | edge_weight |
+| ------------ | ----------- | ------------- | ----------------- | -------- | ----------- | ----------- | ---------------------------------- | ----------- |
+| hr           | name        | crm           | full_name         | 0.615385 | 1.0         | 1.0         | Review                             | 0.846154    |
+| hr           | user_id     | finance       | client_identifier | 0.333333 | 1.0         | 1.0         | Rename candidate (content matches) | 0.733333    |
+| hr           | age         | finance       | years_old         | 0.166667 | 1.0         | 1.0         | Rename candidate (content matches) | 0.666667    |
+| hr           | name        | crm           | Age               | 0.571429 | 1.0         | 0.0         | Review                             | 0.428571    |
+| hr           | age         | crm           | Age               | 1.000000 | 0.0         | 0.0         | Review                             | 0.400000    |
+| hr           | user_id     | crm           | customer_id       | 0.777778 | 0.0         | 0.0         | Review                             | 0.311111    |
+| hr           | user_id     | finance       | years_old         | 0.500000 | 0.0         | 0.0         | Review                             | 0.200000    |
+```
+
+### 3. Joint Visualization
+![img](pic\v0.0.1-network.png)
