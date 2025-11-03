@@ -9,6 +9,14 @@ body:
     attributes:
       value: |
         Thanks for taking the time to report a bug! Please fill out the details below.
+  
+  - type: input
+    id: summary
+    attributes:
+      label: "🔑 Short Summary"
+      description: "Provide a concise description of the bug"
+    validations:
+      required: true
 
   - type: input
     id: version
@@ -16,6 +24,24 @@ body:
       label: FindMyJoint Version
       description: What version are you using? (e.g., 0.0.1)
       placeholder: "0.0.x"
+    validations:
+      required: true
+
+  - type: input
+    id: operating_system
+    attributes:
+      label: "💻 Operating System"
+      description: "Your OS (Windows / Mac / Linux)"
+      placeholder: "Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: python_version
+    attributes:
+      label: "🐍 Python Version"
+      description: "e.g., 3.11.4"
+      placeholder: "3.11.4"
     validations:
       required: true
 
@@ -41,11 +67,56 @@ body:
       required: true
 
   - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Expected Behavior"
+      description: "What you expected to happen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "❌ Actual Behavior"
+      description: "What actually happened"
+    validations:
+      required: true
+
+  - type: textarea
     id: logs
     attributes:
       label: Error Message or Logs
       description: Paste any relevant error output or traceback here.
       render: shell
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "🔧 Additional Context"
+      description: "Anything else that might help debug."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "⚠️ Priority / Severity"
+      description: "Optional, select severity of the bug"
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+        - "Critical"
+    validations:
+      required: false
+
+  - type: textarea
+    id: possible_solution
+    attributes:
+      label: "💡 Possible Solution / Suggestion"
+      description: "Optional: suggest how this could be fixed"
+    validations:
+      required: false
 
   - type: checkboxes
     id: checklist
