@@ -4,7 +4,7 @@
 > [!NOTE]
 > A Python utility to analyze and compare columns across multiple pandas DataFrames, suggesting potential join keys and visualizing the relationships.
 
-> **Package Documentation**: https://rudra-g-23.github.io/Find-My-Joint/
+> 💜 **Package Documentation**: https://rudra-g-23.github.io/Find-My-Joint/
 
 
 When working with multiple disparate datasets, finding common columns to join them on is a tedious manual task. findmyjoint automates this by:
@@ -15,6 +15,12 @@ When working with multiple disparate datasets, finding common columns to join th
 4. Suggesting join confidence levels.
 5. Visualizing the connections as an interactive network graph (using pyvis).
 
+## Gallery
+| Apply on 30 Datasets | E-commerce | Instacart | Demo |
+|:------------:|:-----------:|:-----------:|:------:|
+| ![30](assets/30-data-2.gif) | ![e](assets/ecommerce.gif) | ![instarcart](assets/instarcart.gif) | ![Demo](assets/find-my-joint-v0.0.1-demo-video.gif) |
+| [Code](https://www.kaggle.com/code/rudraprasadbhuyan/30-datasets-apply-find-my-joint-02) | [Code](https://www.kaggle.com/code/rudraprasadbhuyan/apply-find-my-joint-on-ecommerce-dataset-03) | [Code](https://www.kaggle.com/code/rudraprasadbhuyan/how-to-use-find-my-joint-python-package-01) | [Code](https://www.kaggle.com/code/rudraprasadbhuyan/my-python-package-find-my-joint-demo) |
+    
 ## Installation
 You will be able to install this via pip once it's published:
 
